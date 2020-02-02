@@ -13,6 +13,11 @@ par *flashjaysan*
 - Sélectionnez l'option `Import as general project` puis cliquez sur `Next`.
 - Dans le champ `Project name`, définissez le nom du projet puis cliquez sur `Finish`.
 
+## Mettre à jour le projet stocké sur Git
+
+- Dans le panneau `Package Explorer`, faites un clic droit sur la racine du projet puis sélectionnez `Team -> Pull`.
+- Si nécessaire, saisissez votre identifiant de connexion et votre mot de passe puis validez.
+
 ## Définir la nature d'un projet Maven
 
 - Dans le panneau `Package Explorer`, faites un clic droit sur la racine du projet puis sélectionnez `Properties`.
