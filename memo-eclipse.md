@@ -16,7 +16,7 @@ par *flashjaysan*
 ## Définir la nature d'un projet Maven
 
 - Dans le panneau `Package Explorer`, faites un clic droit sur la racine du projet puis sélectionnez `Properties`.
-- Dans la boîte de dialogue `Properties for *nom_du_projet*`, sélectionnez l'option `Project Natures`.
+- Dans la boîte de dialogue `Properties for nom_du_projet`, sélectionnez l'option `Project Natures`.
 - Cliquez sur le bouton `Add`.
 - Si la boîte de dialogue `Confirm nature update` apparaît, cliquez sur le bouton `OK`.
 - Dans la boîte de dialogue `Select Nature`, sélectionnez l'option `Maven Nature` puis cliquez sur le bouton `OK`.
