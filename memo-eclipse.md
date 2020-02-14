@@ -35,3 +35,41 @@ par *flashjaysan*
 - Les propriétés `database` et `user` sont identiques et correspondent à votre identifiant.
 - La propriété `password` correspond à votre mot de passe.
 - Sauvegardez ce fichier et refaites un `Maven Install`.
+
+## Importer automatiquement les classes
+
+Dans l'éditeur, pointez le curseur de la souris sur une classe pour faire apparaître le tooltip d'Eclipse. Cliquez sur l'option `Import 'NomDeClasse' (nom.de.package)`.
+
+## Ouvrir la définition d'un élément
+
+Dans l'éditeur, faites un CTRL + clic sur un élément pour ouvrir le fichier source contenant sa définition.
+
+Dans le panneau `Package Explorer`, cliquez sur le bouton `double flèche` (`Link with Editor`) pour afficher l'arborescence de fichiers sources où se trouve le fichier.
+
+## Forcer la console à afficher la totalité d'un log
+
+- Cliquez sur le menu `Window -> Preferences`.
+- Dans la section `Run/Debug -> Console`, décochez `Limit console output`.
+- Cliquez sur `Apply and Close`.
+
+## Utiliser MySQL avec JDBC
+
+Dans le fichier pom.xml de votre projet Maven, ajoutez la dépendance au driver MySQL :
+
+```java
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.18</version>
+</dependency>
+```
+
+Le code suivant permet d'obtenir une connection à la base de donnée MySQL appelée `gestion` :
+
+```java
+String databaseName = "gestion";
+java.sql.Connection connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/" + databaseName, 
+user, password);
+```
+
+**Remarque :** Si vous avez le message `The server time zone value 'Paris, Madrid' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.` dans la console, ajoutez le code `?useLegacyDatetimeCode=false&serverTimezone=UTC` après le nom de la base de donnée dans votre adresse de connexion.
